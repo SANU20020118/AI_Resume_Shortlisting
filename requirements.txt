@@ -3,3 +3,5 @@ pdfminer.six
 python-docx
 numpy
 gunicorn
+flask
+
