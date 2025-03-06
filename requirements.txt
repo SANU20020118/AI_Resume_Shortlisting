@@ -2,3 +2,4 @@ nltk
 pdfminer.six
 python-docx
 numpy
+gunicorn
