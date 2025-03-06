@@ -4,4 +4,6 @@ python-docx
 numpy
 gunicorn
 flask
+spacy
+
 
