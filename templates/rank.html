@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Candidate Ranking</title>
+</head>
+<body>
+    <h2>Ranked Candidates</h2>
+    <table border="1">
+        <tr>
+            <th>Filename</th>
+            <th>Matched Skills</th>
+            <th>Score</th>
+        </tr>
+        {% for candidate in candidates %}
+        <tr>
+            <td>{{ candidate[0] }}</td>
+            <td>{{ candidate[1] }}</td>
+            <td>{{ candidate[2] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/">Upload More Resumes</a>
+</body>
+</html>
