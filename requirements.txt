@@ -5,6 +5,6 @@ numpy
 gunicorn
 flask
 spacy
-pdftotext
+pdfminer.six
 
 
