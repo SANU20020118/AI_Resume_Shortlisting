@@ -5,6 +5,7 @@ numpy
 gunicorn
 flask
 spacy
-pdfminer.six
+pymupdf
+
 
 
