@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume Analysis</title>
+</head>
+<body>
+    <h1>Resume Analysis: {{ filename }}</h1>
+    <p><strong>Matched Skills:</strong> {{ skills | join(", ") }}</p>
+    <p><strong>Candidate Score:</strong> {{ score }}</p>
+
+    {% if rankings %}
+        <h2>Ranking Based on Job Description</h2>
+        <table border="1">
+            <tr>
+                <th>Filename</th>
+                <th>Score</th>
+                <th>Matched Skills</th>
+            </tr>
+            {% for resume in rankings %}
+            <tr>
+                <td>{{ resume.filename }}</td>
+                <td>{{ resume.score }}</td>
+                <td>{{ resume.matched_skills | join(", ") }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% endif %}
+
+    <a href="/">Upload Another Resume</a>
+</body>
+</html>
