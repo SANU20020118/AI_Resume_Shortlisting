@@ -59,6 +59,8 @@ The goal is to **automate** the initial screening of resumes, helping recruiters
 ---
 
 ## 📁 File Structure
+
+
   
 AI-Resume-Shortlister/
 │
@@ -78,6 +80,8 @@ AI-Resume-Shortlister/
 ├── resumes/ # Folder to store uploaded resumes
 ├── requirements.txt # All dependencies
 └── README.md # Project documentation
+
+
 
 ---
 
