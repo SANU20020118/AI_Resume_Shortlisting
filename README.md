@@ -67,19 +67,25 @@ AI-Resume-Shortlister/
 ├── app.py # Flask main application
 ├── templates/
 │ ├── upload.html # Resume upload page
-│ ├── history.html # Resume history page
-│ └── result.html # Result view page
+│ ├── history.html # History of resumes
+│ └── result.html # Result view
 │
 ├── static/ # CSS / JS files (optional)
+│
 ├── model/
 │ └── skill_extractor.py # spaCy-based skill extractor
+│
 ├── database/
-│ └── db_handler.py # SQLite3 DB operations
+│ └── db_handler.py # SQLite3 DB connection & operations
+│
 ├── matching/
 │ └── ranker.py # TF-IDF-based candidate ranking (planned)
+│
 ├── resumes/ # Folder to store uploaded resumes
+│
 ├── requirements.txt # All dependencies
 └── README.md # Project documentation
+
 
 
 
