@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Upload Resume</title>
 </head>
 <body>
-    <h1>Upload Resume</h1>
-    <form action="/" method="POST" enctype="multipart/form-data">
-        <input type="file" name="resume" required>
-        <input type="file" name="job_description">
+    <h2>Upload Resume</h2>
+    <form action="/" method="post" enctype="multipart/form-data">
+        <label for="resume">Select Resume (PDF/DOCX):</label>
+        <input type="file" name="resume" required><br><br>
+
         <button type="submit">Upload</button>
     </form>
 </body>
