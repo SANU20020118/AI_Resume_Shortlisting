@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, send_from_directory
 import os
 from scripts.main import process_resume
-from scripts.database import get_all_resumes
+from scripts.database import get_all_resumes, init_db # Import init_db
 
 app = Flask(__name__)
 UPLOAD_FOLDER = "uploads"
@@ -31,4 +31,5 @@ def upload_resume():
     return render_template("upload.html")
 
 if __name__ == "__main__":
+    init_db() # Call init_db() here to create the table if it doesn't exist
     app.run(debug=True)
