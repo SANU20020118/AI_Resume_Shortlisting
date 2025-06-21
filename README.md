@@ -1,4 +1,6 @@
- 🤖 AI-Powered Resume Shortlisting System
+# 🤖 AI-Powered Resume Shortlisting System
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 An intelligent web application that automates the process of shortlisting resumes by extracting skills and ranking candidates based on job-specific requirements using Natural Language Processing (NLP).
 
@@ -21,6 +23,7 @@ An intelligent web application that automates the process of shortlisting resume
 - [Future Enhancements](#future-enhancements)
 - [Contributing](#contributing)
 - [License](#license)
+- [Author](#author)
 
 ---
 
@@ -62,22 +65,17 @@ AI-Resume-Shortlister/
 ├── app.py # Flask main application
 ├── templates/
 │ ├── upload.html # Resume upload page
-│ ├── history.html # History of resumes
-│ └── result.html # Result view
+│ ├── history.html # Resume history page
+│ └── result.html # Result view page
 │
 ├── static/ # CSS / JS files (optional)
-│
 ├── model/
 │ └── skill_extractor.py # spaCy-based skill extractor
-│
 ├── database/
-│ └── db_handler.py # SQLite3 DB connection & operations
-│
+│ └── db_handler.py # SQLite3 DB operations
 ├── matching/
 │ └── ranker.py # TF-IDF-based candidate ranking (planned)
-│
 ├── resumes/ # Folder to store uploaded resumes
-│
 ├── requirements.txt # All dependencies
 └── README.md # Project documentation
 
@@ -91,9 +89,11 @@ Edit
 
 ### 📌 Prerequisites
 
-- Python 3.x installed
-- pip installed
+- Python 3.x
+- pip
 - Git (optional)
+
+---
 
 ### 📥 Installation
 
@@ -103,32 +103,31 @@ cd AI-Resume-Shortlister
 pip install -r requirements.txt
 python -m spacy download en_core_web_sm
 🛢️ Database Initialization
-bash
+python
 Copy
 Edit
-python
->>> from database.db_handler import initialize_db
->>> initialize_db()
->>> exit()
+# Run in Python shell or inside a script
+from database.db_handler import initialize_db
+initialize_db()
 🧪 Usage
 📤 Uploading a Resume
-Run the server:
+Start the server:
 
 bash
 Copy
 Edit
 python app.py
-Go to http://localhost:5000
+Open your browser and go to: http://localhost:5000
 
-Upload a resume and view extracted skills.
+Upload a resume to view extracted skills.
 
 📂 Viewing History
-Click on the "History" page to see all analyzed resumes with details.
+Click on the History page to see all previously uploaded resumes and their extracted data.
 
-📊 Candidate Ranking
-Provide a list of required job skills.
+📊 Candidate Ranking (Planned)
+Add a list of required job-specific skills.
 
-System will rank resumes (planned using TF-IDF match).
+The system will compare and rank resumes using TF-IDF similarity.
 
 🔮 Future Enhancements
 ✅ Support for DOCX files
@@ -141,10 +140,11 @@ System will rank resumes (planned using TF-IDF match).
 
 📬 Email notifications with shortlisted resumes
 
-🌐 Host using Render, Railway, or GitHub Pages (static)
+🌐 Deployment via Render/Railway
 
 🤝 Contributing
-Contributions are welcome! Please fork the repository and submit a pull request.
+Contributions are welcome!
+Please fork the repository and submit a pull request with improvements.
 
 📄 License
 This project is licensed under the MIT License.
