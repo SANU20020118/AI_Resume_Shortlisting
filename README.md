@@ -1,6 +1,8 @@
 # 🤖 AI-Powered Resume Shortlisting System
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python)](https://www.python.org/)
+[![Flask](https://img.shields.io/badge/Flask-2.x-lightgrey?logo=flask)](https://flask.palletsprojects.com/)
 
 An intelligent web application that automates the process of shortlisting resumes by extracting skills and ranking candidates based on job-specific requirements using Natural Language Processing (NLP).
 
