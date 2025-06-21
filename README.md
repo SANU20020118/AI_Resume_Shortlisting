@@ -60,24 +60,24 @@ The goal is to **automate** the initial screening of resumes, helping recruiters
 
 ## 📁 File Structure
   
-AI-Resume-Shortlister/
-│
-├── app.py # Flask main application
-├── templates/
-│ ├── upload.html # Resume upload page
-│ ├── history.html # Resume history page
-│ └── result.html # Result view page
-│
-├── static/ # CSS / JS files (optional)
-├── model/
-│ └── skill_extractor.py # spaCy-based skill extractor
-├── database/
-│ └── db_handler.py # SQLite3 DB operations
-├── matching/
-│ └── ranker.py # TF-IDF-based candidate ranking (planned)
-├── resumes/ # Folder to store uploaded resumes
-├── requirements.txt # All dependencies
-└── README.md # Project documentation
+AI_Resume_Shortlisting/
+├── app.py                     # Main Flask application entry point
+├── requirements.txt           # Python dependencies
+├── python_dev.txt             # Example job description for testing ranking
+├── scripts/                   # Directory for core logic modules
+│   ├── database.py            # Handles SQLite database operations (init, insert, get)
+│   ├── extract_skills.py      # Extracts text from PDFs and identifies skills
+│   ├── hashmap_scoring.py     # (Potential) Alternative scoring logic
+│   ├── levenshtein.py         # (Potential) Levenshtein distance for fuzzy matching
+│   ├── main.py                # Orchestrates resume processing and basic ranking
+│   ├── matching.py            # (Potential) Advanced TF-IDF based matching
+│   └── trie_structure.py      # (Potential) Trie data structure for optimized skill lookup
+├── templates/                 # HTML templates for the web interface
+│   ├── history.html           # Displays a list of all analyzed resumes
+│   ├── rank.html              # Displays ranked candidates based on job skills
+│   ├── result.html            # Shows analysis results for a single uploaded resume (includes ranking section)
+│   └── upload.html            # Resume upload form
+└── uploads/                   # Directory to store uploaded resume files
 
 ---
 
